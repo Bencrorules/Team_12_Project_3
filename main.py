@@ -49,7 +49,7 @@ colorizedImage = np.concatenate((lightness[:, :, np.newaxis], ab), axis=2)
 colorizedImage = cv2.cvtColor(colorizedImage, cv2.COLOR_LAB2BGR)
 colorizedImage = (255.0 * colorizedImage).astype("uint8")
 
+# displays the newly created image and waits on '0' to exit program
 cv2.imshow("Black and White Image: ", bwImage)
 cv2.imshow("Colored Image: ", colorizedImage)
 cv2.waitKey(0)
-cv2.destroyAllWindws()
