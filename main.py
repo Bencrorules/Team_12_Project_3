@@ -6,10 +6,10 @@ import cv2
 # Points: https://github.com/richzhang/colorization/blob/caffe/colorization/resources/pts_in_hull.npy
 
 # sets the files in root to some variable names
-modelPath = 'dummy.caffemodel'
+modelPath = 'colorization_release_v2.caffemodel'
 protoPath = 'colorization_deploy_v2.prototxt'
 kernelPath = 'pts_in_hull.npy'
-imagePath = 'image.jpeg'
+imagePath = 'image.jpg'
 
 # calls a function within the pre-trained neural network using our various imported files
 neuralNetwork = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
@@ -38,7 +38,7 @@ lightness -= 50
 
 # imports lightness data into the neural network and receives data back stored into variable ab
 neuralNetwork.setInput(cv2.dnn.blobFromImage(lightness))
-ab = neuralNetwork.forward()[0, :, :, :].transpose((1, 2, 0))
+ab = neuralNetwork.forward()[0,:,:,:].transpose((1,2,0))
 
 # resizes the data back to the original pictures dimensions
 ab = cv2.resize(ab, (bwImage.shape[1], bwImage.shape[0]))
