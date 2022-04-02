@@ -4,12 +4,12 @@ from PIL import ImageTk, Image
 from tkinter import filedialog
 
 root = tk.Tk()
-root.title("B/W to RGB Image Converter")
 root.attributes('-fullscreen', True)
+root.title("B/W to RGB Image Converter")
 
 canvas = Canvas(height="10000", width="10000")
 
-#Adds title to the top of the GUI
+#Adds titles to the top of the GUI
 title = Label(root, text="Black & White to Colored Image Converter", font=('Helvetica', 30, 'bold'))
 title.pack()
 names = Label(root, anchor=CENTER, text="Project 3 by Team 12: Sam Aldeguer, Ben Crocker, Peter Lee, Jordan Cedeno", font=('Helvetica', 15))
@@ -19,13 +19,14 @@ names.pack()
 def upload():
     global img
     global new_image
+    global resized_image
     global imageHeight
     global imageWidth
     root.filename = filedialog.askopenfilename(initialdir="/", title="Select a file", filetypes=(("jpg files", "*.jpg"),("png files", "*.png"),("jpeg files", "*.jpeg"),("all files", "*.*"))) #opens file browser
     img = Image.open(root.filename) #puts image path into variable
-    new_image = ImageTk.PhotoImage(img) #turns image path into image
-    imageHeight = new_image.height()
-    imageWidth = new_image.width()
+    imageWidth,imageHeight = img.size #gets width and height of image
+    resized_image = img.resize((500, (int)((imageHeight/imageWidth)*500))) #scales the image to make it fit on interface
+    new_image = ImageTk.PhotoImage(resized_image) #turns image path into image
     canvas.create_image(150,300,anchor=NW, image=new_image) #adds image to GUI
 
 uploadButton = Button(root, text="Upload image", width=18, height=5, bd='10', command=upload) #creates upload button
