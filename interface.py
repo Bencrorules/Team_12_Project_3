@@ -3,6 +3,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 from tkinter import filedialog
 
+
 root = tk.Tk()
 root.attributes('-fullscreen', True)
 root.title("B/W to RGB Image Converter")
@@ -27,15 +28,22 @@ def upload():
     imageWidth,imageHeight = img.size #gets width and height of image
     resized_image = img.resize((500, (int)((imageHeight/imageWidth)*500))) #scales the image to make it fit on interface
     new_image = ImageTk.PhotoImage(resized_image) #turns image path into image
-    canvas.create_image(150,300,anchor=NW, image=new_image) #adds image to GUI
+
+    imageLabel = Label(root, image=new_image)
+    imageLabel.place(relx=0.15, rely=0.6, anchor=W) #adds image to GUI
 
 uploadButton = Button(root, text="Upload image", width=18, height=5, bd='10', command=upload) #creates upload button
 
+
 uploadButton.place(relx=0.5, rely=0.15, anchor=CENTER) #places upload button at top center of screen
 
-canvas.create_text(400, 250, text="Black & White Photo", font=('Helvetica', 25, 'bold')); #Black & White photo label
-canvas.create_text(1050, 250, text="Colored", font=('Helvetica', 25, 'bold')); #Colored photo label
+bwLabel = Label(root, text="Black & White Photo", font=('Helvetica', 25, 'bold')) #Black & White photo label
+bwLabel.place(relx=0.2, rely=0.35, anchor=W)
+colorLabel = Label(root, text="Colored", font=('Helvetica', 25, 'bold')) #Colored photo label
+colorLabel.place(relx=0.8, rely=0.35, anchor=E)
 
 canvas.pack() #Puts everything onto the GUI
 
+
 root.mainloop()
+
