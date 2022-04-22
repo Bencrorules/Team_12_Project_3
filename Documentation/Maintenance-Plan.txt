@@ -1,0 +1,49 @@
+[Costs for hiring developers]
+In the next year our project most likely will not receive any major updates. 
+Some smaller bug fixing or quality of life updates will need to be made. We 
+will also need to perform adaptive and preventive maintenance to keep our project 
+working as intended as we live in a world with rapidly evolving technology.
+
+We won't need to hire full time developers to maintain the project as the scope 
+is not extremely large. At most hiring part time developers would be enough, but 
+is most likely not needed. That leaves us with two choices. Our group could continue 
+development on the project in our free time as a hobby or what is probably the best 
+choice for our project will be to open source the project. Open sourcing will eliminate 
+the cost for hiring developers entirely. 
+
+[Fees for servers and domain names]
+Depending on our needs for server space the monthly cost of renting a server would be 
+$100-$200. We could also go the route of a cloud server which is significantly cheaper 
+starting at $5 a month or $60 a year. A cloud server at most would be around $40 a month 
+or $480 dollars a year. (Prices quoted from servermania.com)
+
+The annual fee for a domain name is roughly in the range of $10-$20 a year.
+
+[Fees for distribution platform]
+The cost of fees for making our project available on different distribution platforms will 
+vary a little from platform to platform. If our project is a paid application then each 
+distribution platform will take a percentage of the annual net app revenue. If our project 
+is available for free then we won't have to worry about the distribution platform taking a 
+commission fee. Listed below are a few distribution platforms and the fees that they charge.
+
+Apple App Store fees - There are no hosting fees, but there's an annual fee of $99 for the 
+Apple Developer Program. Apple also takes either 30% of app revenue when making more than 
+$1 million in annual net app revenue or 15% when making less than $1 million in annual net revenue. 
+
+Google Play Store fees - Like Apple, Google also takes a 30% share of revenue, but after 1 
+year that share is reduced to 15%. There is a one-time registration fee of $25 for a developer account.
+
+Amazon Appstore fees - 30% share of revenue.
+
+Microsoft Store fees - 30% share of revenue. One-time registration fee of $19 for an 
+individual developer account or $99 for a company developer account.
+
+However, our project will most likely be open sourced or a hobby project so it would be 
+better if we simply make the repository for the project available on GitHub and then there 
+will be a $0 cost for distribution.
+
+[Total Fees]
+To maintain our project for the next year will end up being on the cheaper side of maintaining 
+software. At the absolute most it will be around $500 for the year. The majority of this cost is 
+for a cloud server and we could cut the cost for that down quite a bit depending on our need for 
+storage. The total maintenance cost for our project will end up being between $70 to $500.
