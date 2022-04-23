@@ -51,7 +51,7 @@ def colorize(image):
     colorizedImage = cv2.cvtColor(colorizedImage, cv2.COLOR_LAB2BGR)
     colorizedImage = (255.0 * colorizedImage).astype("uint8")
 
-    # saves the newly created image
+    # saves the newly created image and sends it off
     filename = 'finalImage.jpg'
     cv2.imwrite(filename, colorizedImage)
     return filename

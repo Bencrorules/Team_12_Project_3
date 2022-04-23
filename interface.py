@@ -58,12 +58,14 @@ def stresstest():
     global imageHeight
     global imageWidth
 
+    # tests if testimage.jpg can be loaded
     try:
         img = Image.open('testimage.jpg')  # puts image path into variable
         print("Successfully opened test black and white image")
     except:
         print("Failed to open test black and white image")
 
+    # tests if the colorizer.py file returns successfully
     try:
         colored_image_path = colorizer.colorize('testimage.jpg')
         colored_image = Image.open(colored_image_path)
@@ -71,6 +73,7 @@ def stresstest():
     except:
         print("Failed to produce colored image from nural network")
 
+    # tests image resize
     try:
         imageWidth, imageHeight = img.size  # gets width and height of image
         resized_image = img.resize(
@@ -79,12 +82,14 @@ def stresstest():
     except:
         print("Failed to resize black and white image")
 
+    # tests image reading functionality
     try:
         bw_image = ImageTk.PhotoImage(resized_image)  # turns image path into image
         print("Successfully read black and white image")
     except:
         print("Failed to read black and white image")
 
+    # tests adding read image to canvas
     try:
         imageLabel1 = Label(root, image=bw_image)
         imageLabel1.place(relx=0.100, rely=0.6, anchor=W)  # adds image to GUI
@@ -92,6 +97,7 @@ def stresstest():
     except:
         print("Failed to add black and white image to the canvas")
 
+    # testing for colored image:
     try:
         imageWidth, imageHeight = colored_image.size  # gets width and height of image
         resized_image = colored_image.resize(
