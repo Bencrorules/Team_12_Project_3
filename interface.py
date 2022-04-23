@@ -60,11 +60,16 @@ def stresstest():
 
     try:
         img = Image.open('testimage.jpg')  # puts image path into variable
+        print("Successfully opened test black and white image")
+    except:
+        print("Failed to open test black and white image")
+
+    try:
         colored_image_path = colorizer.colorize('testimage.jpg')
         colored_image = Image.open(colored_image_path)
-        print("Successfully stored test image path")
+        print("Successfully produced colored image from nural network")
     except:
-        print("Failed to store test image path")
+        print("Failed to produce colored image from nural network")
 
     try:
         imageWidth, imageHeight = img.size  # gets width and height of image
@@ -76,9 +81,9 @@ def stresstest():
 
     try:
         bw_image = ImageTk.PhotoImage(resized_image)  # turns image path into image
-        print("Successfully opened black and white image")
+        print("Successfully read black and white image")
     except:
-        print("Failed to open black and white image")
+        print("Failed to read black and white image")
 
     try:
         imageLabel1 = Label(root, image=bw_image)
@@ -97,9 +102,9 @@ def stresstest():
 
     try:
         cl_image = ImageTk.PhotoImage(resized_image)  # turns image path into image
-        print("Successfully opened colored image")
+        print("Successfully read colored image")
     except:
-        print("Failed to open colored image")
+        print("Failed to read colored image")
 
     try:
         imageLabel2 = Label(root, image=cl_image)
