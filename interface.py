@@ -29,7 +29,6 @@ def upload():
     root.filename = filedialog.askopenfilename(initialdir="/", title="Select a file", filetypes=(
     ("jpg files", "*.jpg"), ("png files", "*.png"), ("jpeg files", "*.jpeg"),
     ("all files", "*.*")))  # opens file browser
-    print(root.filename)
     img = Image.open(root.filename)  # puts image path into variable
     colored_image_path = colorizer.colorize(root.filename)
     colored_image = Image.open(colored_image_path)
@@ -50,9 +49,70 @@ def upload():
     imageLabel2 = Label(root, image=cl_image)
     imageLabel2.place(relx=0.90, rely=0.6, anchor=E)  # adds image to GUI
 
+def stresstest():
+    print("Backend Results:")
+    global img
+    global bw_image
+    global cl_image
+    global resized_image
+    global imageHeight
+    global imageWidth
 
-uploadButton = Button(root, text="Upload image", width=18, height=5, bd='15', command=upload, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates upload button
-uploadButton.place(relx=0.5, rely=0.15, anchor=CENTER)  # places upload button at top center of screen
+    try:
+        img = Image.open('testimage.jpg')  # puts image path into variable
+        colored_image_path = colorizer.colorize('testimage.jpg')
+        colored_image = Image.open(colored_image_path)
+        print("Successfully stored test image path")
+    except:
+        print("Failed to store test image path")
+
+    try:
+        imageWidth, imageHeight = img.size  # gets width and height of image
+        resized_image = img.resize(
+            (800, int((imageHeight / imageWidth) * 800)))  # scales the image to make it fit on interface
+        print("Successfully resized black and white image")
+    except:
+        print("Failed to resize black and white image")
+
+    try:
+        bw_image = ImageTk.PhotoImage(resized_image)  # turns image path into image
+        print("Successfully opened black and white image")
+    except:
+        print("Failed to open black and white image")
+
+    try:
+        imageLabel1 = Label(root, image=bw_image)
+        imageLabel1.place(relx=0.100, rely=0.6, anchor=W)  # adds image to GUI
+        print("Successfully added black and white image to the canvas")
+    except:
+        print("Failed to add black and white image to the canvas")
+
+    try:
+        imageWidth, imageHeight = colored_image.size  # gets width and height of image
+        resized_image = colored_image.resize(
+            (800, int((imageHeight / imageWidth) * 800)))  # scales the image to make it fit on interface
+        print("Successfully resized colored image")
+    except:
+        print("Failed to resize colored image")
+
+    try:
+        cl_image = ImageTk.PhotoImage(resized_image)  # turns image path into image
+        print("Successfully opened colored image")
+    except:
+        print("Failed to open colored image")
+
+    try:
+        imageLabel2 = Label(root, image=cl_image)
+        imageLabel2.place(relx=0.90, rely=0.6, anchor=E)  # adds image to GUI
+        print("Successfully added colored image to canvas")
+    except:
+        print("Failed to add colored image to canvas")
+
+uploadButton = Button(root, text="Upload Image", width=18, height=5, bd='15', command=upload, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates upload button
+uploadButton.place(relx=0.4, rely=0.15, anchor=CENTER)  # places upload button at top center of screen
+
+testButton = Button(root, text="Test System", width=18, height=5, bd='15', command=stresstest, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates upload button
+testButton.place(relx=0.6, rely=0.15, anchor=CENTER)  # places upload button at top center of screen
 
 bwLabel = Label(root, text="Black & White Photo", font=('Helvetica', 32, 'bold'), bg="#476A6F", fg="#1F2633")  # Black & White photo label
 bwLabel.place(relx=0.175, rely=0.35, anchor=W)
