@@ -23,7 +23,13 @@ def bulksave():
 
     selectedpath = filedialog.askdirectory()
     newdirectory = selectedpath + "/Colored Photos"
-    os.mkdir(newdirectory)
+
+    try:
+        os.mkdir(newdirectory)
+    except:
+        tkinter.messagebox.showinfo("Notice", "Please Delete Old Conversion")
+        return
+
     for filename in os.scandir(selectedpath):
         if filename.is_file():
             global img
@@ -67,6 +73,8 @@ def upload():
 
     imageLabel2 = Label(root, image=cl_image)
     imageLabel2.place(relx=0.90, rely=0.6, anchor=E)  # adds image to GUI
+
+    os.remove('finalImage.jpg')
 
 # Method that functions same as normal upload but with stock picture
 def stresstest():
@@ -138,6 +146,8 @@ def stresstest():
         print("Successfully added colored image to canvas")
     except:
         print("Failed to add colored image to canvas")
+
+    os.remove('finalImage.jpg')
 
 uploadButton = Button(root, text="Upload Image", width=18, height=5, bd='15', command=upload, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates button
 uploadButton.place(relx=0.3, rely=0.15, anchor=CENTER)  # places button at top center of screen
