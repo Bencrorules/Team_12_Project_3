@@ -1,1 +1,48 @@
-	To deploy our project, we first need to focus on releasing it as a desktop application on the Apple App Store, as that is the method of releasing closest to our project as of now. The first step in doing this is to enroll in the Apple Developer Program, which allows you to submit apps to the App Store. We will need to accumulate funds for this, as it costs $99 a year to enroll. With this enrolling, we will get access to App Store Connect, which is a portal for managing your project within the app store. After this, we need to make sure that our app is ready to be launched to the app store. This involves rigorously testing our app to make sure there are no bugs and putting our project through the app certification process, which is a test performed by Apple to see if it conforms to the guidelines. Next, we need to create an App Store listing via Apple Store Connect. This involves putting all of the information about the app on the app store, creating an app logo, and taking screenshots of the app to display to the public. Once this is done, the app will show up on the app store. Next, we need to upload the app itself (its code) to the app store under the listing we created using XCode. Finally, the last step of this is to officially submit the app for review, and then once it is accepted it is on the app store. After deploying on the app store as a desktop app, we need to recreate this project as a mobile app. This shouldn’t be too rigorous, as it just involves rescaling and adjusting the app to fit the height and width of a phone. Once this is done, we will also release this mobile version to the app store by completing the same steps as we did for releasing it as a desktop application. Finally, our last step for full deployment is to create a website version of this project. In order to do this, we first need to create a web interface using HTML, CSS, and Javascript. We then need to connect our Python backend with this newly developed web interface in order to colorize the black and white photo. Once this is done, we need to accumulate the funds to purchase a domain of our choosing, which is usually $10-12 a year. Once this is purchased, we need to upload our code to the domain so that the site can be accessible on the web. After the full deployment of our app through the mobile, desktop, and web versions, the estimated costs should be around $110 a year plus the cost of advertising if we plan to do so. Our potential market is a wide variety of people. We feel that our biggest target audience would be historians, as they can use our app to take old black and white photos and bring them to life by adding color. Another target audience would be artists, as they can upload their black and white sketches and drawings and also bring them to life by seeing a colored version of it. We also realize that there are just curious people out there who want to see what some black and white photos look like with color, so we will market to more than historians and artists.
+	To deploy our project, we first need to focus on releasing 
+	it as a desktop application on the Apple App Store, as that 
+	is the method of releasing closest to our project as of now.
+
+	The first step in doing this is to enroll in the Apple Developer 
+	Program, which allows you to submit apps to the App Store. 
+	We will need to accumulate funds for this, as it costs $99 
+	a year to enroll. With this enrolling, we will get access to 
+	App Store Connect, which is a portal for managing your project 
+	within the app store. After this, we need to make sure that our 
+	app is ready to be launched to the app store. This involves 
+	rigorously testing our app to make sure there are no bugs and 
+	putting our project through the app certification process, which 
+	is a test performed by Apple to see if it conforms to the guidelines.
+
+	Next, we need to create an App Store listing via Apple Store Connect. 
+	This involves putting all of the information about the app on the app 
+	store, creating an app logo, and taking screenshots of the app to display 
+	to the public. Once this is done, the app will show up on the app store. 
+	Next, we need to upload the app itself (its code) to the app store under 
+	the listing we created using XCode. Finally, the last step of this is to 
+	officially submit the app for review, and then once it is accepted it is on 
+	the app store. 
+	
+	After deploying on the app store as a desktop app, we need to recreate this 
+	project as a mobile app. This shouldn’t be too rigorous, as it just involves 
+	rescaling and adjusting the app to fit the height and width of a phone. Once 
+	this is done, we will also release this mobile version to the app store by 
+	completing the same steps as we did for releasing it as a desktop application. 
+	
+	Finally, our last step for full deployment is to create a website 
+	version of this project. In order to do this, we first need to create a web 
+	interface using HTML, CSS, and Javascript. We then need to connect our Python 
+	backend with this newly developed web interface in order to colorize the black 
+	and white photo. Once this is done, we need to accumulate the funds to purchase 
+	a domain of our choosing, which is usually $10-12 a year. Once this is purchased, 
+	we need to upload our code to the domain so that the site can be accessible on the 
+	web. After the full deployment of our app through the mobile, desktop, and web versions, 
+	the estimated costs should be around $110 a year plus the cost of advertising if we 
+	plan to do so. Our potential market is a wide variety of people. 
+	
+	We feel that our biggest target audience would be historians, as they can use our 
+	app to take old black and white photos and bring them to life by adding color. 
+	Another target audience would be artists, as they can upload their black and white 
+	sketches and drawings and also bring them to life by seeing a colored version of it. 
+	We also realize that there are just curious people out there who want to see what some 
+	black and white photos look like with color, so we will market to more than historians 
+	and artists.
