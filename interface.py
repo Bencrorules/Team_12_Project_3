@@ -1,4 +1,6 @@
+import os
 import tkinter as tk
+import tkinter.messagebox
 import colorizer
 from tkinter import *
 from PIL import ImageTk, Image
@@ -17,6 +19,23 @@ names = Label(root, anchor=CENTER, text="Project 3 by Team 12: Sam Aldeguer, Ben
               font=('Helvetica', 15), fg="#1F2633")
 names.pack()
 
+def bulksave():
+
+    selectedpath = filedialog.askdirectory()
+    newdirectory = selectedpath + "/Colored Photos"
+    os.mkdir(newdirectory)
+    for filename in os.scandir(selectedpath):
+        if filename.is_file():
+            global img
+
+            img = Image.open(filename.path)  # puts image path into variable
+            colored_image_path = colorizer.colorize(filename.path)
+            colored_image = Image.open(colored_image_path)
+
+            newimagepath = newdirectory + "/" + os.path.basename(filename)
+            colored_image.save(newimagepath)
+    del newimagepath, colored_image, colored_image_path, img, newdirectory, selectedpath
+    tkinter.messagebox.showinfo("Notice", "Conversion Complete!")
 
 # Method that uploads the image from the button and places the images.
 def upload():
@@ -49,6 +68,7 @@ def upload():
     imageLabel2 = Label(root, image=cl_image)
     imageLabel2.place(relx=0.90, rely=0.6, anchor=E)  # adds image to GUI
 
+# Method that functions same as normal upload but with stock picture
 def stresstest():
     print("Backend Results:")
     global img
@@ -119,11 +139,14 @@ def stresstest():
     except:
         print("Failed to add colored image to canvas")
 
-uploadButton = Button(root, text="Upload Image", width=18, height=5, bd='15', command=upload, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates upload button
-uploadButton.place(relx=0.4, rely=0.15, anchor=CENTER)  # places upload button at top center of screen
+uploadButton = Button(root, text="Upload Image", width=18, height=5, bd='15', command=upload, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates button
+uploadButton.place(relx=0.3, rely=0.15, anchor=CENTER)  # places button at top center of screen
 
-testButton = Button(root, text="Test System", width=18, height=5, bd='15', command=stresstest, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates upload button
-testButton.place(relx=0.6, rely=0.15, anchor=CENTER)  # places upload button at top center of screen
+massConversion = Button(root, text="Mass Conversion", width=18, height=5, bd='15', command=bulksave, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates button
+massConversion.place(relx=0.5, rely=0.15, anchor=CENTER)  # places button at top center of screen
+
+testButton = Button(root, text="Test System", width=18, height=5, bd='15', command=stresstest, bg="#e9f0ea", fg="#1F2633", font=('Helvetica', 16))  # creates button
+testButton.place(relx=0.7, rely=0.15, anchor=CENTER)  # places button at top center of screen
 
 bwLabel = Label(root, text="Black & White Photo", font=('Helvetica', 32, 'bold'), bg="#476A6F", fg="#1F2633")  # Black & White photo label
 bwLabel.place(relx=0.175, rely=0.35, anchor=W)
