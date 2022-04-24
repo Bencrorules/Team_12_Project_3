@@ -1,1 +1,18 @@
-The code for our project involved two main code artifacts, which were the user-interface and the colorization files that convert the image from black and white to colored. Each of the artifacts were worked on separately, as some members worked strictly on the colorization files while others worked on the interface. In order to work together on the project, we used Github in order to add to each other's code and build off each other in order to get working artifacts. We were also in constant communication with each other about what tasks we were working on, what tasks we finished, and what tasks we needed to get done. Communication was important for this project because we needed to make sure two people weren’t working and committing on the same functionalities and it makes less of a confusion. Then, after both artifacts have been completed and tested, we then integrated the colorization files and the interface together to have one coherent program. With that being said, the integration strategy that we utilized was the All-At-Once Integration strategy. The All-At-Once strategy involves coding and testing each artifact separately, and then linking the artifacts together in the end, and then testing the product as a whole. Our actions align with this definition, as we first coded and tested the two main artifacts (colorization files and interface), and then linked them together in the end so that the interface can upload a black and white photo and display the colored version. Once they were linked, we tested this linked interface to see if the final product worked.
+The code for our project involved two main code artifacts, which were the user-interface 
+and the colorization files that convert the image from black and white to colored. 
+Each of the artifacts were worked on separately, as some members worked strictly on 
+the colorization files while others worked on the interface. In order to work together 
+on the project, we used Github in order to add to each other's code and build off each 
+other in order to get working artifacts. We were also in constant communication with each 
+other about what tasks we were working on, what tasks we finished, and what tasks we needed 
+to get done. Communication was important for this project because we needed to make sure 
+two people weren’t working and committing on the same functionalities and it makes less of 
+a confusion. Then, after both artifacts have been completed and tested, we then integrated 
+the colorization files and the interface together to have one coherent program. With that 
+being said, the integration strategy that we utilized was the All-At-Once Integration strategy.
+The All-At-Once strategy involves coding and testing each artifact separately, and then linking 
+the artifacts together in the end, and then testing the product as a whole. Our actions align 
+with this definition, as we first coded and tested the two main artifacts (colorization files 
+and interface), and then linked them together in the end so that the interface can upload a 
+black and white photo and display the colored version. Once they were linked, we tested this 
+linked interface to see if the final product worked.
