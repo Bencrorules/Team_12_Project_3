@@ -25,10 +25,10 @@
     | Total Estimate: 24 hours
 
 [Actual Person-Hours]
-    | Team Discussion: 
-    | Testing: 
-    | Documentation:  
-    | Presentation Prep: 
-    | Coding: 
+    | Team Discussion: 1 hour
+    | Testing: 2 hours
+    | Documentation: 5 hours
+    | Presentation Prep: 11 hours
+    | Coding: 7 hours
     
-    | Total: 
+    | Total: 26 hours
