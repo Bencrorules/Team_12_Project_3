@@ -28,7 +28,7 @@
     | Team Discussion: 1 hour
     | Testing: 2 hours
     | Documentation: 5 hours
-    | Presentation Prep: 10 hours
-    | Coding: 8 hours
+    | Presentation Prep: 11 hours
+    | Coding: 7 hours
     
     | Total: 26 hours
